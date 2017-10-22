@@ -71,7 +71,7 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
   Seleccionar el adaptor creado y click en "start".
   Ejecutar el siguiente código en un “playground”. 
   
-  `DBRepository conectar.
+  `DBRepository conectar.`
 
   Verificar que en el mongod que aceptó la conexión.
   Luego ejecutar en el playground el siguiente código:
