@@ -52,9 +52,9 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 
 ```
   MCHttpRepository
-  location: 'https://catedras.lifia.info.unlp.edu.ar/monticello'
-  user: 'tpoo2012'
-  password: 'tpoo2012'
+    location: 'https://catedras.lifia.info.unlp.edu.ar/monticello'
+    user: 'tpoo2012'
+    password: 'tpoo2012'
 ```
 
   Una vez hecho esto podrás acceder a el repositorio del proyecto en la ventana de diálogo que se abre.
