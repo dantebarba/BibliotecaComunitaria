@@ -72,10 +72,8 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
   K)Ejecutar el siguiente código en un “playground”. 
   
   DBRepository conectar.
-  
-  Verificar que en el mongod que aceptó la conexión.
-  
-  Luego ejecutar en el playground el siguiente código:
-  (WAAdmin register: LoginComponent asApplicationAt: 'hello')preferenceAt: #sessionClass put: Sesion.
 
+  Verificar que en el mongod que aceptó la conexión.
+  Luego ejecutar en el playground el siguiente código:
+  (WAAdmin register: LoginComponent asApplicationAt: 'hello')preferenceAt: #sessionClass put: Sesion.
   Ir al navegador, entrar en: localhost:8080/hello y loguearse con Facebook
