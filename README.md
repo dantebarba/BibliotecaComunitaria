@@ -50,7 +50,8 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
   Click izquierdo →Monticello Browser → +Repository (Seleccionar HTTP).
   Y pegar este contenido:
 
-  ```MCHttpRepository
+  ```Smalltalk
+  MCHttpRepository
   location: 'https://catedras.lifia.info.unlp.edu.ar/monticello'
   user: 'tpoo2012'
   password: 'tpoo2012'`
