@@ -44,7 +44,7 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
   guration Browser y realizar las instalaciones en dicho orden:
 
   1) Instalar la versión estable de Voyage mongo (EstebanLorenzano.47). 
-  ** ES IMPORTANTE INSTALAR PRIMERO VOYAGE MONGO ANTES DE MONGO TALK. **
+** ES IMPORTANTE INSTALAR PRIMERO VOYAGE MONGO ANTES DE MONGO TALK. **
   2) Instalar la version estable de Mongotalk (EstebanLorenzano.43)
   3) Instalar la versión estable de Seaside3 (topa.278)
   E)Agregar el repositorio de la cátedra en Monticello.
