@@ -1,4 +1,4 @@
-# BibliotecaComunitaria
+# BibliotecaComunitaria [![Build Status](https://travis-ci.org/dantebarba/BibliotecaComunitaria.svg?branch=master)](https://travis-ci.org/dantebarba/BibliotecaComunitaria)
 Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 
 # Instalacion del proyecto
