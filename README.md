@@ -81,3 +81,17 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
   `(WAAdmin register: LoginComponent asApplicationAt: 'hello')preferenceAt: #sessionClass put: Sesion.`
   
   Ir al navegador, entrar en: localhost:8080/hello y loguearse con Facebook
+  
+  -----
+  
+  ## Configuración de Telegram
+  
+  La aplicación permite consultar reservas utilizando la app de mensajería Telegram. Esto se logra a través de los llamados
+  **bots**. Los bots son aplicaciones con inteligencia automatizada que permiten la interacción entre usuarios. Estas aplicaciones son configurables a gusto del programador o quien las utilice. 
+    Para poder interactuar con un bot, primero es necesario crear uno. Para la aplicación **Biblioteca Comunitaria** se ha preconfigurado un bot llamado **@BibliotecaComunitaria** que puede ser buscado en la aplicación de Telegram de la plataforma que se desee utilizar. 
+    
+- El primer comando /start nos permite iniciar la secuencia de pasos.
+- Luego se le solicitará al usuario que ingrese el nombre de usuario de la Biblioteca Comunitaria.
+- Al ingresar el usuario, se le listarán las reservas disponibles y sus respectivos estados.
+
+
