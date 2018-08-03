@@ -115,9 +115,6 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
   **bots**. Los bots son aplicaciones con inteligencia automatizada que permiten la interacción entre usuarios. Estas aplicaciones son configurables a gusto del programador o quien las utilice.
     Para poder interactuar con un bot, primero es necesario crear uno. Para la aplicación **Biblioteca Comunitaria** se ha preconfigurado un bot llamado [**@BibliotecaComunitariaBot**](https://t.me/BibliotecaComunitariaBot) que puede ser buscado en la aplicación de Telegram de la plataforma que se desee utilizar.
 
-- El primer comando /start nos permite iniciar la secuencia de pasos.
-- Luego, con el comando /isbn se permitirá buscar un libro
-
 #### Requisitos:
 
 - Tener la microaplicacion "telegram_webserver" en
@@ -137,7 +134,7 @@ Gofer new
   load.
 `
 
-#### Comandos disponibles: /isbn 1234
+#### Comandos disponibles:
 
 - **/start** -> Comando de entrada al bot.
 - **/isbn {isbn}** -> Muestra el libro con ISBN {isbn} si existe
