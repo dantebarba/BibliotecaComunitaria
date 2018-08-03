@@ -35,7 +35,7 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
   cial:
 
   https://robomongo.org/download
-  
+
 - Repositorios de Pharo.
 
   Sobre una imagen nueva de Pharo 4.0 hacer lo siguiente:
@@ -43,7 +43,7 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 
   guration Browser y realizar las instalaciones en dicho orden:
 
-  1) Instalar la versión estable de Voyage mongo (EstebanLorenzano.47). 
+  1) Instalar la versión estable de Voyage mongo (EstebanLorenzano.47).
 **ES IMPORTANTE INSTALAR PRIMERO VOYAGE MONGO ANTES DE MONGO TALK.**
   2) Instalar la version estable de Mongotalk (EstebanLorenzano.43)
   3) Instalar la versión estable de Seaside3 (topa.278)
@@ -68,30 +68,60 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 
   Se deberá crear la base de datos siguiento estos pasos:
   Click derecho sobre la conexión → Create database y ponerle de nombre **“comunidad”**.
-  
+
   Click izquierdo → Tools → Seaside Control Panel → Click derecho sobre el espacio blanco → Add adaptor →
   seleccionar **“ZnZincServerAdapter** y click en “ok”. Quedará en el puerto 8080.
   Seleccionar el adaptor creado y click en "start".
-  Ejecutar el siguiente código en un “playground”. 
-  
+
+  **Estos pasos pueden ser reemplazados por el siguiente comando unificado**
+
+  `CommunityLibrary start.`
+
+  Ejecutar el siguiente código en un “playground”.
+
   `DBRepository conectar.`
 
   Verificar que en el mongod que aceptó la conexión.
   Luego ejecutar en el playground el siguiente código:
   `(WAAdmin register: LoginComponent asApplicationAt: 'hello')preferenceAt: #sessionClass put: Sesion.`
-  
+
   Ir al navegador, entrar en: localhost:8080/hello y loguearse con Facebook
-  
+
+- Mocking
+
+  Si en vez de utilizar base de datos, deseamos simplemente inicializar los servicios, con datos
+  precargados en memoria, podemos ejecutar el siguiente comando:
+
+  `CommunityLibrary mock.`
+
+- Docker
+
+  El proyecto se encuentra parcialmente dockerizado. Para utilizar las funcionalidades de telegram, se debe Ejecutar una micro aplicación montada sobre un contenedor de docker.
+
+  Requisitos:
+    - docker
+    - docker-compose 3.1 o superior.
+
+  Sobre la carpeta donde se ecuentra el archivo **docker-compose.yml**
+
+  `$ docker-compose build`
+  `$ docker-compose up`
+
   -----
-  
+
   ## Configuración de Telegram
-  
+
   La aplicación permite consultar reservas utilizando la app de mensajería Telegram. Esto se logra a través de los llamados
-  **bots**. Los bots son aplicaciones con inteligencia automatizada que permiten la interacción entre usuarios. Estas aplicaciones son configurables a gusto del programador o quien las utilice. 
-    Para poder interactuar con un bot, primero es necesario crear uno. Para la aplicación **Biblioteca Comunitaria** se ha preconfigurado un bot llamado [**@BibliotecaComunitariaBot**](https://t.me/BibliotecaComunitariaBot) que puede ser buscado en la aplicación de Telegram de la plataforma que se desee utilizar. 
-    
+  **bots**. Los bots son aplicaciones con inteligencia automatizada que permiten la interacción entre usuarios. Estas aplicaciones son configurables a gusto del programador o quien las utilice.
+    Para poder interactuar con un bot, primero es necesario crear uno. Para la aplicación **Biblioteca Comunitaria** se ha preconfigurado un bot llamado [**@BibliotecaComunitariaBot**](https://t.me/BibliotecaComunitariaBot) que puede ser buscado en la aplicación de Telegram de la plataforma que se desee utilizar.
+
 - El primer comando /start nos permite iniciar la secuencia de pasos.
-- Luego se le solicitará al usuario que ingrese el nombre de usuario de la Biblioteca Comunitaria.
-- Al ingresar el usuario, se le listarán las reservas disponibles y sus respectivos estados.
+- Luego, con el comando /isbn se permitirá buscar un libro
 
+Ejemplo de comando: /isbn 1234
 
+  Requisitos:
+    - Tener la microaplicacion "telegram_webserver" en
+    ejecución
+    - Tener Pharo configurado con el servidor funcionando (probar ingresar a localhost:8080/hello)
+    - Tener una cuenta activa en Telegram.
