@@ -73,17 +73,18 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
   seleccionar **“ZnZincServerAdapter** y click en “ok”. Quedará en el puerto 8080.
   Seleccionar el adaptor creado y click en "start".
 
-  **Estos pasos pueden ser reemplazados por el siguiente comando unificado**
+>  Ejecutar el siguiente código en un “playground”.
+>
+>  `DBRepository conectar.`
+>
+>  Verificar que en el mongod que aceptó la conexión.
+>  Luego ejecutar en el playground el siguiente código:
+>  `(WAAdmin register: LoginComponent asApplicationAt: 'hello')preferenceAt: #sessionClass put: Sesion.`
 
-  `CommunityLibrary start.`
 
-  Ejecutar el siguiente código en un “playground”.
+**Estos pasos pueden ser reemplazados por el siguiente comando unificado**
 
-  `DBRepository conectar.`
-
-  Verificar que en el mongod que aceptó la conexión.
-  Luego ejecutar en el playground el siguiente código:
-  `(WAAdmin register: LoginComponent asApplicationAt: 'hello')preferenceAt: #sessionClass put: Sesion.`
+`CommunityLibrary start.`
 
   Ir al navegador, entrar en: localhost:8080/hello y loguearse con Facebook
 
