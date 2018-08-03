@@ -118,10 +118,28 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 - El primer comando /start nos permite iniciar la secuencia de pasos.
 - Luego, con el comando /isbn se permitirá buscar un libro
 
-Ejemplo de comando: /isbn 1234
+#### Requisitos:
 
-  Requisitos:
-    - Tener la microaplicacion "telegram_webserver" en
+- Tener la microaplicacion "telegram_webserver" en
     ejecución
-    - Tener Pharo configurado con el servidor funcionando (probar ingresar a localhost:8080/hello)
-    - Tener una cuenta activa en Telegram.
+- Tener Pharo configurado con el servidor funcionando (probar ingresar a localhost:8080/hello)
+- Tener una cuenta activa en Telegram.
+
+#### Configuracion:
+
+Ejecutar los siguientes comandos en **playground**
+`
+Gofer new
+  squeaksource: 'Seaside30Addons';
+  package: 'Seaside-REST-Core';
+  package: 'Seaside-Pharo-REST-Core';
+  package: 'Seaside-Tests-REST-Core';
+  load.
+`
+
+#### Comandos disponibles: /isbn 1234
+
+- **/start** -> Comando de entrada al bot.
+- **/isbn {isbn}** -> Muestra el libro con ISBN {isbn} si existe
+- **/books** -> Lista todos los libros disponibles en la biblioteca
+- **/help** -> Muestra la lista de comandos
