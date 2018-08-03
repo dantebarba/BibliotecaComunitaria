@@ -138,7 +138,7 @@ Gofer new
 
 #### Comandos disponibles:
 
-- **/start** -> Comando de entrada al bot.
-- **/isbn {isbn}** -> Muestra el libro con ISBN {isbn} si existe
-- **/books** -> Lista todos los libros disponibles en la biblioteca
-- **/help** -> Muestra la lista de comandos
+- **/start** &rarr; Comando de entrada al bot.
+- **/isbn {isbn}** &rarr; Muestra el libro con ISBN {isbn} si existe
+- **/books** &rarr; Lista todos los libros disponibles en la biblioteca
+- **/help** &rarr; Muestra la lista de comandos
