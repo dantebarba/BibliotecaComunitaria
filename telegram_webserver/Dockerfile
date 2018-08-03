@@ -1,9 +1,9 @@
-FROM python:2
+FROM python:2-alpine
 
 RUN pip install --upgrade pip
-RUN pip install pyopenssl
+RUN pip install requests
 RUN pip install python-telegram-bot --upgrade
 
-ADD app.py .
+ADD . .
 
 CMD [ "python", "./app.py" ]

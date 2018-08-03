@@ -1,12 +1,13 @@
-from flask import Flask
 from biblioteca_comunitaria import BibliotecaComunitaria
-from telegram_client import TelegramClient
+import telegram_client
 
-biblioteca = BibliotecaComunitaria()
-telegram_client = TelegramClient('413352364:AAEeRyLwuX8A7oeK1HVb1AGc4L6rYofwBQQ')
+class App:
+    _biblioteca = BibliotecaComunitaria()
 
-def biblioteca():
-    return biblioteca
+    @staticmethod
+    def biblioteca():
+        return App._biblioteca
 
 if __name__ == "__main__":
-    telegram_client.start()
+    print 'App Launched'
+    telegram_client.TelegramClient('413352364:AAEeRyLwuX8A7oeK1HVb1AGc4L6rYofwBQQ').start()

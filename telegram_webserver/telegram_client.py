@@ -1,18 +1,21 @@
 from telegram.ext import Updater
+from telegram.ext import CommandHandler
+from telegram.ext import MessageHandler, Filters
 import logging
-import app
+from app import App
 
 class TelegramClient:
 
-    def __init__(self, token=''):
-        self.updater = Updater(token='token')
+    def __init__(self, token_param=''):
+        self.updater = Updater(token=token_param)
         logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         level=logging.INFO)
-        self.registerHandlers
+        self.registerHandlers()
 
     def registerHandlers(self):
-        self.dispatcher.add_handler(CommandHandler('start', CommandFactory.start))
-        dispatcher.add_handler(MessageHandler(Filters.command, CommandFactory.unknown))
+        self.dispatcher().add_handler(CommandHandler('start', CommandFactory.start))
+        self.dispatcher().add_handler(CommandHandler('isbn', CommandFactory.isbn, pass_args=True))
+        self.dispatcher().add_handler(MessageHandler(Filters.command, CommandFactory.unknown))
 
     def dispatcher(self):
         return self.updater.dispatcher
@@ -26,12 +29,24 @@ class TelegramClient:
 
 
 class CommandFactory:
+
+    @staticmethod
     def start(bot, update):
         bot.send_message(chat_id=update.message.chat_id,
         text="Bienvenido a la biblioteca comunitaria. Por favor ingrese el isbn del libro que busca.")
 
+    @staticmethod
     def unknown(bot, update):
         bot.send_message(chat_id=update.message.chat_id, text="Comando incorrecto. Por favor ingrese un isbn.")
 
-    def isbn(bot, update):
-        bot.send_message(chat_id=update.message.chat_id, text=app.biblioteca().isbn(args[0]))
+    @staticmethod
+    def isbn(bot, update, args):
+        if not args:
+            bot.send_message(chat_id=update.message.chat_id, text="Por favor ingrese un ISBN")
+        else:
+            try:
+                bot.send_message(chat_id=update.message.chat_id, text=App.biblioteca().isbn(args[0]))
+            except Exception as e:
+                bot.send_message(chat_id=update.message.chat_id,
+                text="Ha ocurrido un error al obtener el Libro con ISBN " + str(args[0]))
+                raise
