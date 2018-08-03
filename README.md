@@ -104,8 +104,10 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 
   Sobre la carpeta donde se ecuentra el archivo **docker-compose.yml**
 
-  `$ docker-compose build`
-  `$ docker-compose up`
+```
+  $ docker-compose build
+  $ docker-compose up
+```
 
   -----
 
@@ -125,14 +127,14 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 #### Configuracion:
 
 Ejecutar los siguientes comandos en **playground**
-`
+```
 Gofer new
   squeaksource: 'Seaside30Addons';
   package: 'Seaside-REST-Core';
   package: 'Seaside-Pharo-REST-Core';
   package: 'Seaside-Tests-REST-Core';
   load.
-`
+```
 
 #### Comandos disponibles:
 
