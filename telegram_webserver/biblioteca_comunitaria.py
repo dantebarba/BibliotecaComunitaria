@@ -21,7 +21,7 @@ class BibliotecaComunitaria:
         return self.prettyPrint(response.json())
 
     def books(self):
-        response = requests.get("http://docker.for.mac.localhost:8080/api/books)
+        response = requests.get("http://docker.for.mac.localhost:8080/api/books")
         if (response.status_code == 404):
             return "El ISBN ingresado no fue encontrado"
         return self.prettyPrint(response.json())
