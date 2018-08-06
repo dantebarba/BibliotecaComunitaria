@@ -15,7 +15,7 @@ Editorial: %s''' % (self.isbn, self.autor, self.editorial)
 class BibliotecaComunitaria:
 
     def isbn(self, isbn=""):
-        response = requests.get("http://docker.for.mac.localhost:8080/api/"+isbn)
+        response = requests.get("http://pharo:8080/api/"+isbn)
         if (response.status_code == 404):
             return "El ISBN ingresado no fue encontrado"
         return self.prettyPrint(response.json())
