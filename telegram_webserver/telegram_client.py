@@ -25,6 +25,7 @@ class TelegramClient:
 
     def start(self):
         self.updater.start_polling()
+        self.updater.idle()
 
     def stop(self):
         self.updater.stop()
