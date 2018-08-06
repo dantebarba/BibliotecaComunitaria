@@ -11,11 +11,12 @@ services:
     container_name: mongo-biblioteca
     ports:
       - "27017:27017"
-#   pharo:
-#     image: dantebarba/pharo:40-slim
-#     container_name: pharo
-#     ports:
-#       - "8080:8080"
-# #    command: pharo /var/data/Pharo.image test --no-xterm --fail-on-failure "(Zodiac-Tests)"
-#     volumes:
-#       - "~/docker/pharo/data:/var/data"
+  pharo:
+    image: dantebarba/pharo:40-slim
+    container_name: pharo
+    restart: always
+    ports:
+      - "8080:8080"
+    command: pharo --no-xterm --headless /var/data/Pharo4.0.image st /var/data/run.st --no-quit
+    volumes:
+      - "./biblioteca_api:/var/data"
