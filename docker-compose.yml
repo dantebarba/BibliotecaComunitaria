@@ -14,9 +14,8 @@ services:
   pharo:
     image: dantebarba/pharo:40-slim
     container_name: pharo
-    restart: always
     ports:
       - "8080:8080"
-    command: pharo --no-xterm --headless /var/data/Pharo4.0.image st /var/data/run.st --no-quit
+    command: pharo -vm-display-null --no-xterm --headless /var/data/Pharo4.0.image st /var/data/run.st --no-quit
     volumes:
       - "./biblioteca_api:/var/data"
