@@ -60,7 +60,7 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 
   Una vez hecho esto podrás acceder a el repositorio del proyecto en la ventana de diálogo que se abre.
   F)Buscar a la izquiera en los paquetes “CommunityLibraryFacebook”, clickearlo y a la derecha seleccionar la versión
-  39 (CommunityLibraryFacebook-fmendiburu.39.mcz) y clickear “load”. Esto descargará sobre la imagen, la
+  41 (CommunityLibraryFacebook-DanteBarba.41.mcz) y clickear “load”. Esto descargará sobre la imagen, la
   última versión del proyecto.
 
 
@@ -97,7 +97,7 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 
 - Docker
 
-  El proyecto se encuentra parcialmente dockerizado. Para utilizar las funcionalidades de telegram, se debe Ejecutar una micro aplicación montada sobre un contenedor de docker.
+  El proyecto se encuentra **completamente** dockerizado. Para utilizar las funcionalidades de telegram, se debe Ejecutar una micro aplicación montada sobre un contenedor de docker.
 
   Requisitos:
     - docker
@@ -110,9 +110,9 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
   $ docker-compose up
 ```
 
-  -----
+-----
 
-  ## Configuración de Telegram
+## Configuración de Telegram
 
   La aplicación permite consultar reservas utilizando la app de mensajería Telegram. Esto se logra a través de los llamados
   **bots**. Los bots son aplicaciones con inteligencia automatizada que permiten la interacción entre usuarios. Estas aplicaciones son configurables a gusto del programador o quien las utilice.
@@ -143,3 +143,21 @@ Gofer new
 - **/isbn {isbn}** &rarr; Muestra el libro con ISBN {isbn} si existe
 - **/books** &rarr; Lista todos los libros disponibles en la biblioteca
 - **/help** &rarr; Muestra la lista de comandos
+
+
+-----
+
+## Configuracion personalizada de Docker
+
+Docker nos ofrece mucha versatilidad a la hora de ejecutar nuestras aplicaciones en los contenedores. Pharo se encuentra, dentro de la imagen **dantebarba/pharo:40-slim**. Dentro del archivo docker-compose.yml podemos observar que a la imagen se le ejecuta un comando:
+
+```
+command: pharo -vm-display-null --headless /var/data/Pharo4.0.image st /var/data/run.st --no-quit
+```
+- headless : Se ejecuta pharo sin display
+- Pharo4.0.image : Se ejecuta pharo con la imagen que se encuentra dentro de git. Esta imagen es plug'n'play, viene
+configurada por defecto con toda la aplicación en su última versión.
+- st run.st : Se ejecutan los comandos contenidos en el archivo "run.st" en el playground de pharo, 
+esto nos permite inicializar ambientes, configuraciones y servidores.
+
+
