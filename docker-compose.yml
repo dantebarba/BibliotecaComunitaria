@@ -5,12 +5,16 @@ services:
     container_name: "telegram_client"
     ports:
       - "80:80"
+    depends_on:
+      - mongo-biblioteca
+      - pharo
 
   mongo-biblioteca:
     image: mongo
     container_name: mongo-biblioteca
     ports:
       - "27017:27017"
+
   pharo:
     image: dantebarba/pharo:40-slim
     container_name: pharo
@@ -19,3 +23,5 @@ services:
     command: pharo -vm-display-null --headless /var/data/Pharo4.0.image st /var/data/run.st --no-quit
     volumes:
       - "./biblioteca_api:/var/data"
+    depends_on:
+      - mongo-biblioteca
