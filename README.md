@@ -44,12 +44,35 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
   guration Browser y realizar las instalaciones en dicho orden:
 
   1) Instalar la versión estable de Voyage mongo (EstebanLorenzano.47).
+  
 **ES IMPORTANTE INSTALAR PRIMERO VOYAGE MONGO ANTES DE MONGO TALK.**
+
   2) Instalar la version estable de Mongotalk (EstebanLorenzano.43)
-  3) Instalar la versión estable de Seaside3 (topa.278)
-  E)Agregar el repositorio de la cátedra en Monticello.
-  Click izquierdo →Monticello Browser → +Repository (Seleccionar HTTP).
-  Y pegar este contenido:
+
+  3) Ejecutar el siguiente comando en **playground**
+
+```
+  Gofer it
+     smalltalkhubUser: 'SvenVanCaekenberghe' project: 'Neo';
+     configurationOf: 'NeoJSON';
+     loadStable.
+```
+
+  4) Instalar la versión estable de Seaside3 (topa.278)
+
+  5) Ejecutar el siguiente comando en **playground**
+
+```
+  Gofer new
+    squeaksource: 'Seaside30Addons';
+    package: 'Seaside-REST-Core';
+    package: 'Seaside-Pharo-REST-Core';
+    package: 'Seaside-Tests-REST-Core';
+    load.
+```
+
+  6) Agregar el repositorio de la cátedra en Monticello.
+  Click izquierdo →Monticello Browser → +Repository (Seleccionar HTTP) y pegar lo siguiente:
 
 ```
   MCHttpRepository
@@ -59,8 +82,8 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 ```
 
   Una vez hecho esto podrás acceder a el repositorio del proyecto en la ventana de diálogo que se abre.
-  F)Buscar a la izquiera en los paquetes “CommunityLibraryFacebook”, clickearlo y a la derecha seleccionar la versión
-  41 (CommunityLibraryFacebook-DanteBarba.41.mcz) y clickear “load”. Esto descargará sobre la imagen, la
+
+  7) Buscar a la izquiera en los paquetes “CommunityLibraryFacebook”, clickearlo y a la derecha seleccionar la versión 41 (CommunityLibraryFacebook-DanteBarba.41.mcz) y clickear “load”. Esto descargará sobre la imagen, la
   última versión del proyecto.
 
 
@@ -157,7 +180,5 @@ command: pharo -vm-display-null --headless /var/data/Pharo4.0.image st /var/data
 - headless : Se ejecuta pharo sin display
 - Pharo4.0.image : Se ejecuta pharo con la imagen que se encuentra dentro de git. Esta imagen es plug'n'play, viene
 configurada por defecto con toda la aplicación en su última versión.
-- st run.st : Se ejecutan los comandos contenidos en el archivo "run.st" en el playground de pharo, 
+- st run.st : Se ejecutan los comandos contenidos en el archivo "run.st" en el playground de pharo,
 esto nos permite inicializar ambientes, configuraciones y servidores.
-
-
