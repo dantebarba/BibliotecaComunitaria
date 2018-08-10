@@ -41,13 +41,13 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
   Sobre una imagen nueva de Pharo 4.0 hacer lo siguiente:
   Click izquierdo → Tools → Configuration Browser y realizar las instalaciones en dicho orden:
 
-  1) Instalar la versión estable de Voyage mongo (EstebanLorenzano.47).
+1) Instalar la versión estable de Voyage mongo (EstebanLorenzano.47).
   
   **ES IMPORTANTE INSTALAR PRIMERO VOYAGE MONGO ANTES DE MONGO TALK.**
 
-  2) Instalar la version estable de Mongotalk (EstebanLorenzano.43)
+2) Instalar la version estable de Mongotalk (EstebanLorenzano.43)
 
-  3) Ejecutar el siguiente comando en **playground**
+3) Ejecutar el siguiente comando en **playground**
 
 ```
   Gofer it
@@ -56,9 +56,9 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
      loadStable.
 ```
 
-  4) Instalar la versión estable de Seaside3 (topa.278)
+4) Instalar la versión estable de Seaside3 (topa.278)
 
-  5) Ejecutar el siguiente comando en **playground**
+5) Ejecutar el siguiente comando en **playground**
 
 ```
   Gofer new
@@ -69,8 +69,8 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
     load.
 ```
 
-  6) Agregar el repositorio de la cátedra en Monticello.
-  Click izquierdo →Monticello Browser → +Repository (Seleccionar HTTP) y pegar lo siguiente:
+6) Agregar el repositorio de la cátedra en Monticello.
+Click izquierdo →Monticello Browser → +Repository (Seleccionar HTTP) y pegar lo siguiente:
 
 ```
   MCHttpRepository
@@ -81,8 +81,8 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 
   Una vez hecho esto podrás acceder a el repositorio del proyecto en la ventana de diálogo que se abre.
 
-  7) Buscar a la izquiera en los paquetes “CommunityLibraryFacebook”, clickearlo y a la derecha seleccionar la versión 41 (CommunityLibraryFacebook-DanteBarba.41.mcz) y clickear “load”. Esto descargará sobre la imagen, la
-  última versión del proyecto.
+7) Buscar a la izquiera en los paquetes “CommunityLibraryFacebook”, clickearlo y a la derecha seleccionar la versión 41 (CommunityLibraryFacebook-DanteBarba.41.mcz) y clickear “load”. Esto descargará sobre la imagen, la
+última versión del proyecto.
 
 
 - Configuracion de base de datos:
