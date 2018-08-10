@@ -39,13 +39,11 @@ Biblioteca comunitaria. Proyecto correspondiente a TPOO 2017.
 - Repositorios de Pharo.
 
   Sobre una imagen nueva de Pharo 4.0 hacer lo siguiente:
-  Click izquierdo → Tools → Con
-
-  guration Browser y realizar las instalaciones en dicho orden:
+  Click izquierdo → Tools → Configuration Browser y realizar las instalaciones en dicho orden:
 
   1) Instalar la versión estable de Voyage mongo (EstebanLorenzano.47).
   
-**ES IMPORTANTE INSTALAR PRIMERO VOYAGE MONGO ANTES DE MONGO TALK.**
+  **ES IMPORTANTE INSTALAR PRIMERO VOYAGE MONGO ANTES DE MONGO TALK.**
 
   2) Instalar la version estable de Mongotalk (EstebanLorenzano.43)
 
