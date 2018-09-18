@@ -1,4 +1,4 @@
-FROM python:2-alpine
+FROM python:2
 
 RUN pip install --upgrade pip
 RUN pip install requests
